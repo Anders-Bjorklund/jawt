@@ -34,3 +34,5 @@ Jwt jwt = Jwt.create(SECRET, Algorithm.SHA256,<br>
     <br>
 By calling jwt.claim( "sub" ) you will receive the value<br>
 <b>My new JWT</b>
+<br><br>
+Should there be an issue with the signature, a FraudulentSignatureException will be thrown during Jwt.create(). Try this by sending in a fraudulent JWT, where the signature does not match the contents.
