@@ -25,8 +25,9 @@ By calling jwt.toString() you will receive the serialized version<br>
 <b>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJNeSBuZXcgSldUIiwiYXVkIjoiSmF2YSBkZXZlbG9wZXJzIiwiaWF0IjoxNTE2MjM5MDIyfQ.OkdYsq8gjdarkp8haVWsIvXFu_YAeDYbpbgI-DIR3VA</b>
 <br>
 <br>
+<br>
 <b>Example use ( reading from an incomming JWT ):<br></b>
-<br><br>
+<br>
 String SECRET ="SECRET";                       // I'd suggest using a better secret.<br>
 Jwt jwt = Jwt.create(SECRET, Algorithm.SHA256,<br>
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJNeSBuZXcgSldUIiwiYXVkIjoiSmF2YSBkZXZlbG9wZXJzIiwiaWF0IjoxNTE2MjM5MDIyfQ.OkdYsq8gjdarkp8haVWsIvXFu_YAeDYbpbgI-DIR3VA");<br>
