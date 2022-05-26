@@ -24,12 +24,10 @@ Jwt jwt = Jwt.create( SECRET, Algorithm.SHA256).claim( "sub", "My new JWT" ).cla
 ```
 
 By calling jwt.toString() you will receive the serialized version<br>
-<b>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJNeSBuZXcgSldUIiwiYXVkIjoiSmF2YSBkZXZlbG9wZXJzIiwiaWF0IjoxNTE2MjM5MDIyfQ.OkdYsq8gjdarkp8haVWsIvXFu_YAeDYbpbgI-DIR3VA</b>
-<br>
-<br>
-<br>
-<b>Example use ( reading from an incomming JWT ):<br></b>
-<br>
+`eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJNeSBuZXcgSldUIiwiYXVkIjoiSmF2YSBkZXZlbG9wZXJzIiwiaWF0IjoxNTE2MjM5MDIyfQ.OkdYsq8gjdarkp8haVWsIvXFu_YAeDYbpbgI-DIR3VA`
+
+
+<b>Example use ( reading from an incomming JWT ):</b>
 
 ```java
 String SECRET ="SECRET";  // I'd suggest using a better secret.
@@ -38,6 +36,6 @@ Jwt jwt = Jwt.create(SECRET, Algorithm.SHA256,<br>
 ```
 
 By calling jwt.claim( "sub" ) you will receive the value<br>
-<b>My new JWT</b>
+`My new JWT`
 
 Should there be an issue with the signature, a FraudulentSignatureException will be thrown during Jwt.create(). Try this by sending in a fraudulent JWT, where the signature does not match the contents. If you do not try this, before using this library in production, you are not allowed to use this library in production.
