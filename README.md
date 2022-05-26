@@ -39,3 +39,12 @@ By calling jwt.claim( "sub" ) you will receive the value<br>
 `My new JWT`
 
 Should there be an issue with the signature, a FraudulentSignatureException will be thrown during Jwt.create(). Try this by sending in a fraudulent JWT, where the signature does not match the contents. If you do not try this, before using this library in production, you are not allowed to use this library in production.
+
+## Maven
+```xml 
+ <dependency>
+      <groupId>se.hackney.jwt</groupId>
+      <artifactId>jawt</artifactId>
+      <version>1.0</version>
+    </dependency>
+```
